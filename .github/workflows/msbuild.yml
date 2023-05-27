@@ -40,7 +40,7 @@ jobs:
       uses: SonarSource/sonarcloud-github-c-cpp@v1
       
     - name: Debug - list files
-      run: ls -l
+      run: Get-ChildItem
 
     - name: Run build-wrapper
       working-directory: ${{env.GITHUB_WORKSPACE}}
