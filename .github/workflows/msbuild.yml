@@ -27,6 +27,8 @@ jobs:
   build:
     name: Build
     runs-on: windows-latest
+    env:
+      BUILD_WRAPPER_OUT_DIR: .
 
     steps:
     - uses: actions/checkout@v3
@@ -41,6 +43,9 @@ jobs:
       
     - name: Debug - list files
       run: Get-ChildItem
+      
+    - name: Restore nuget packages
+      run: nuget restore .\ConsoleApplication1.sln
 
     - name: Run build-wrapper
       run: |
