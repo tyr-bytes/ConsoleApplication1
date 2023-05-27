@@ -43,6 +43,9 @@ jobs:
       
     - name: Debug - list files
       run: Get-ChildItem
+      
+    - name: Restore nuget packages
+      run: nuget restore .\ConsoleApplication1.sln
 
     - name: Run build-wrapper
       run: |
