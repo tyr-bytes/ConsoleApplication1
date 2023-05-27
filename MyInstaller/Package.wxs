@@ -10,6 +10,6 @@
       <ComponentGroupRef Id="ExampleComponents" />
     </Feature>
 
-	  <ui:WixUI Id="WixUI_Mondo" InstallDirectory="INSTALLFOLDER" />
+	  
   </Package>
 </Wix>
